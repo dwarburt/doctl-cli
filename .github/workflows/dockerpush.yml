@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout
-      - uses: elgohr/Publish-Docker-Github-Action
+      - uses: actions/checkout@v2
+      - uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: dwarburton/doctl-cli
           username: dwarburton
