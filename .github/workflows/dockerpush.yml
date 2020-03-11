@@ -1,0 +1,15 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - uses: elgohr/Publish-Docker-Github-Action
+        with:
+          name: dwarburton/doctl-cli
+          username: dwarburton
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          tags: $GITHUB_SHA,latest
