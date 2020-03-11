@@ -12,4 +12,4 @@ jobs:
           name: dwarburton/doctl-cli
           username: dwarburton
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: ${{GITHUB_SHA}},latest
+          tags: ${{ env.GITHUB_SHA }}
